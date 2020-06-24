@@ -194,16 +194,16 @@
 /* This board provides the board_on_reset interface */
 #define BOARD_HAS_ON_RESET 1
 
-#define PX4_GPIO_INIT_LIST { \
-		PX4_ADC_GPIO,                     \
-		GPIO_CAN1_TX,                     \
-		GPIO_CAN1_RX,                     \
-		GPIO_CAN1_SILENT_S0,              \
-		GPIO_nPOWER_IN_A,                 \
-		GPIO_VDD_3V3_SPEKTRUM_POWER_EN,   \
-		GPIO_VDD_3V3_SENSORS_EN,          \
-		GPIO_TONE_ALARM_IDLE,             \
-		GPIO_SAFETY_SWITCH_IN,            \
+#define PX4_GPIO_INIT_LIST {                               \
+		PX4_ADC_GPIO,                              \
+		GPIO_CAN1_TX,                              \
+		GPIO_CAN1_RX,                              \
+		GPIO_CAN1_SILENT_S0,                       \
+		GPIO_nPOWER_IN_A,                          \
+		GPIO_VDD_3V3_SPEKTRUM_POWER_EN,            \
+		PX4_GPIO_PIN_OFF(GPIO_VDD_3V3_SENSORS_EN), \
+		GPIO_TONE_ALARM_IDLE,                      \
+		GPIO_SAFETY_SWITCH_IN,                     \
 	}
 
 #define BOARD_ENABLE_CONSOLE_BUFFER
